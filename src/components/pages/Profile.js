@@ -6,7 +6,7 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
 const Profile = () => {
     const styles = StyleSheet.create({
-        pageBlock :{
+        pageBlock: {
             padding: 15,
         },
         userIcon: {

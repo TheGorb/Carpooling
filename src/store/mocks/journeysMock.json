@@ -1,0 +1,198 @@
+[
+    {
+      "id": "2bc70ffe-028b-11ed-b939-0242ac120002",
+      "age": 32,
+      "email": "schneiderrose@lumbrex.com",
+      "phone": "+1 (914) 440-2430",
+      "departure": {
+        "fullAddress": "934 Desmond Court, Summerfield, American Samoa, 3446",
+        "streetNumber": 934,
+        "streetName": "Desmond Court",
+        "city": "Summerfield",
+        "state": "American Samoa",
+        "zipCode": 3446
+      },
+      "arrival": {
+        "fullAddress": "174 Ellery Street, Onton, Federated States Of Micronesia, 4078",
+        "streetNumber": 174,
+        "streetName": "Ellery Street",
+        "city": "Onton",
+        "state": "Federated States Of Micronesia",
+        "zipCode": 4078
+      },
+      "autor": "62ce8a2c71ffa81308291797",
+      "date": "Mon May 28 1973 01:20:54 GMT+0100 (heure normale d’Europe centrale)",
+      "isAutorDriver": false,
+      "car": "",
+      "isJourneyFinished": false,
+      "isJourneyFilled": false
+    },
+    {
+      "id": "3b092b78-028b-11ed-b939-0242ac120002",
+      "age": 32,
+      "email": "schneiderrose@lumbrex.com",
+      "phone": "+1 (989) 417-2198",
+      "departure": {
+        "fullAddress": "937 Howard Avenue, Coleville, Connecticut, 1294",
+        "streetNumber": 543,
+        "streetName": "Bradford Street",
+        "city": "Strykersville",
+        "state": "Delaware",
+        "zipCode": 1711
+      },
+      "arrival": {
+        "fullAddress": "375 Hornell Loop, Libertytown, New Hampshire, 4527",
+        "streetNumber": 768,
+        "streetName": "Wyckoff Street",
+        "city": "Callaghan",
+        "state": "Iowa",
+        "zipCode": 7693
+      },
+      "autor": "43c65056-028b-11ed-b939-0242ac120002",
+      "date": "Tue Oct 03 1978 21:09:02 GMT+0100 (heure normale d’Europe centrale)",
+      "isAutorDriver": true,
+      "car": "",
+      "isJourneyFinished": true,
+      "isJourneyFilled": false
+    },
+    {
+      "id": "43c65056-028b-11ed-b939-0242ac120002",
+      "age": 30,
+      "email": "schneiderrose@lumbrex.com",
+      "phone": "+1 (930) 568-3241",
+      "departure": {
+        "fullAddress": "673 Dunne Court, Riner, Pennsylvania, 6448",
+        "streetNumber": 910,
+        "streetName": "Schenectady Avenue",
+        "city": "Stonybrook",
+        "state": "Alabama",
+        "zipCode": 1216
+      },
+      "arrival": {
+        "fullAddress": "162 Highland Boulevard, Taycheedah, South Dakota, 1638",
+        "streetNumber": 525,
+        "streetName": "Garland Court",
+        "city": "Canterwood",
+        "state": "Rhode Island",
+        "zipCode": 5796
+      },
+      "autor": "62ce8a2ce45e2507aa1133e1",
+      "date": "Sun Jul 09 2000 22:55:05 GMT+0200 (heure d’été d’Europe centrale)",
+      "isAutorDriver": false,
+      "car": "",
+      "isJourneyFinished": false,
+      "isJourneyFilled": false
+    },
+    {
+      "id": "5b21f610-028b-11ed-b939-0242ac120002",
+      "age": 36,
+      "email": "schneiderrose@lumbrex.com",
+      "phone": "+1 (844) 583-2536",
+      "departure": {
+        "fullAddress": "255 Cass Place, Roderfield, Guam, 5546",
+        "streetNumber": 653,
+        "streetName": "Drew Street",
+        "city": "Summerset",
+        "state": "Vermont",
+        "zipCode": 7981
+      },
+      "arrival": {
+        "fullAddress": "996 Hopkins Street, Avalon, Marshall Islands, 2853",
+        "streetNumber": 297,
+        "streetName": "Berkeley Place",
+        "city": "Boling",
+        "state": "Minnesota",
+        "zipCode": 9019
+      },
+      "autor": "62ce8a2c59031e294daa881e",
+      "date": "Wed Jan 29 2003 22:19:05 GMT+0100 (heure normale d’Europe centrale)",
+      "isAutorDriver": true,
+      "car": "",
+      "isJourneyFinished": true,
+      "isJourneyFilled": true
+    },
+    {
+      "id": "68699508-028b-11ed-b939-0242ac120002",
+      "age": 24,
+      "email": "schneiderrose@lumbrex.com",
+      "phone": "+1 (877) 462-2940",
+      "departure": {
+        "fullAddress": "884 Johnson Street, Utting, Alaska, 8865",
+        "streetNumber": 244,
+        "streetName": "Seagate Terrace",
+        "city": "Guilford",
+        "state": "Nebraska",
+        "zipCode": 3589
+      },
+      "arrival": {
+        "fullAddress": "900 Lincoln Terrace, Lafferty, Wyoming, 5925",
+        "streetNumber": 169,
+        "streetName": "Blake Avenue",
+        "city": "Northridge",
+        "state": "Arkansas",
+        "zipCode": 7544
+      },
+      "autor": "62ce8a2c7a99f7c64b361d7a",
+      "date": "Mon Jul 05 1976 10:21:33 GMT+0200 (heure d’été d’Europe centrale)",
+      "isAutorDriver": true,
+      "car": "",
+      "isJourneyFinished": true,
+      "isJourneyFilled": false
+    },
+    {
+      "id": "78db8108-028b-11ed-b939-0242ac120002",
+      "age": 35,
+      "email": "schneiderrose@lumbrex.com",
+      "phone": "+1 (958) 572-3521",
+      "departure": {
+        "fullAddress": "440 Rose Street, Hayden, Maine, 6366",
+        "streetNumber": 563,
+        "streetName": "Prospect Street",
+        "city": "Cotopaxi",
+        "state": "North Dakota",
+        "zipCode": 9909
+      },
+      "arrival": {
+        "fullAddress": "242 Campus Road, Cawood, Wisconsin, 3017",
+        "streetNumber": 799,
+        "streetName": "Sharon Street",
+        "city": "Dawn",
+        "state": "Idaho",
+        "zipCode": 4447
+      },
+      "autor": "62ce8a2c305949aef11c77e5",
+      "date": "Sun Aug 19 2012 20:35:37 GMT+0200 (heure d’été d’Europe centrale)",
+      "isAutorDriver": true,
+      "car": "",
+      "isJourneyFinished": true,
+      "isJourneyFilled": true
+    },
+    {
+      "id": "84d6ce22-028b-11ed-b939-0242ac120002",
+      "age": 28,
+      "email": "schneiderrose@lumbrex.com",
+      "phone": "+1 (891) 455-3790",
+      "departure": {
+        "fullAddress": "575 Belmont Avenue, Rose, Indiana, 6943",
+        "streetNumber": 426,
+        "streetName": "Oakland Place",
+        "city": "Talpa",
+        "state": "New Mexico",
+        "zipCode": 5128
+      },
+      "arrival": {
+        "fullAddress": "509 Atlantic Avenue, Bascom, Kansas, 5993",
+        "streetNumber": 237,
+        "streetName": "Glendale Court",
+        "city": "Blairstown",
+        "state": "Michigan",
+        "zipCode": 8229
+      },
+      "autor": "62ce8a2c5fef390e27111ef8",
+      "date": "Tue Feb 01 1994 18:34:36 GMT+0100 (heure normale d’Europe centrale)",
+      "isAutorDriver": true,
+      "car": "",
+      "isJourneyFinished": false,
+      "isJourneyFilled": false
+    }
+]

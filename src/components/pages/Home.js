@@ -1,46 +1,85 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
 //UI
 import {View, Text, StyleSheet, Button, TextInput, TouchableOpacity} from 'react-native';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+
+// Utils
 import DatePicker from 'react-native-date-picker';
+import { getHours, getMinutes, getMonth, format } from 'date-fns'
+
+// Components
+import JourneyForm from '../UI/JourneyForm';
 
 const Home = ({navigation}) => {
+    // Local state
+    const [test, setTest] = useState("17")
     const [date, setDate] = useState(new Date())
-    const [open, setOpen] = useState(false)
+    const [time, setTime] = useState(new Date())
+    const [openDate, setOpenDate] = useState(false)
+    const [openTime, setOpenTime] = useState(false)
+
+    const [minute, setMinute] = useState()
+    const [hour, setHour] = useState()
+    const [day, setDay] = useState()
+    const [month, setMonth] = useState()
+    const [year, setYear] = useState()
+
+    const months = {
+        "0": "January",
+        "1": "February",
+        "2": "March",
+        "3": "April",
+        "4": "May",
+        "5": "June",
+        "6": "July",
+        "7": "August",
+        "8": "September",
+        "9": "October",
+        "10": "November",
+        "11": "December"
+    }
+
+    useEffect(() => {
+        const formatedMonth = date.getMonth().toString();
+        setMonth(months[formatedMonth]);
+        // setMonth(format(date, 'MM').toString())
+        setDay(format(date, 'dd').toString())
+        setYear(format(date, 'yyyy').toString())
+    }, [date])
+
+    useEffect(() => {
+        setHour(format(time, 'HH').toString());
+        setMinute(format(time, 'mm').toString());
+    }, [time])
 
     const styles = StyleSheet.create({
         pageBlock: {
             padding: 15,
             flex:1,
+            justifyContent: 'space-between'
         },
         textInput: {
             flex: 1,
             borderWidth: 1,
+            borderRadius: 15
         },
         validateButton: {
             borderRadius: 25,
+        },
+        validateButtonAndFormBlock: {
+            borderWidth: 2,
+            borderRadius: 15,
+            padding: 15,
+        },
+        inputBlock: {
+            alignItems: 'center',
+            flexDirection: 'row',
         },
         userIcon: {
             alignSelf: 'flex-end',
             fontSize: 50,
         },
-        textInputIcons: {
-            fontSize: 25,
-            marginRight: 5,
-        },
-        slashIcon: {
-            fontSize: 25
-        },
-        formBlock: {
-            marginBottom: 15,
-        },
-        validateButtonAndFormBlock: {},
-        inputBlock: {
-            alignItems: 'center',
-            flexDirection: 'row',
-        }
     });
 
     return (
@@ -50,107 +89,20 @@ const Home = ({navigation}) => {
                 onPress={() => navigation.navigate('Profile')}
                 style={styles.userIcon}>
             </FontAwesome5>
-            <View>
-                <View style={styles.formBlock}>
-                    <View>
-                        <Text>Departure</Text>
-                        <View style={styles.inputBlock}>
-                            <FontAwesome5 name="route" style={styles.textInputIcons}>
-                            </FontAwesome5>
-                            <TextInput 
-                                placeholder="Departure" 
-                                style={styles.textInput}> 
-                            </TextInput>
-                        </View>
-                    </View>
-                    <View>
-                        <Text>Arrival</Text>
-                        <View style={styles.inputBlock}>
-                            <FontAwesome5 name="route" style={styles.textInputIcons}>
-                            </FontAwesome5>
-                            <TextInput 
-                                placeholder="Arrival" 
-                                style={styles.textInput}> 
-                            </TextInput>
-                        </View>
-                    </View>
-                    <View>
-                        <Text>Date</Text>
-                        <View style={styles.inputBlock}>
-                            <TouchableOpacity 
-                                onPress={() => setOpen(true)} 
-                                style={{
-                                    flex: 1,
-                                    flexDirection: 'row',
-                                    alignItems: 'center'
-                                }}>
-                                <FontAwesome5 name="calendar" style={styles.textInputIcons}>
-                                </FontAwesome5>
-                                <DatePicker date={date} onDateChange={setDate} modal/>
-                                <TextInput 
-                                    style={styles.textInput}
-                                    editable={false}> 
-                                </TextInput>
-                                <MaterialCommunityIcons 
-                                    name="slash-forward" 
-                                    style={styles.slashIcon}></MaterialCommunityIcons>
-                                <TextInput 
-                                    style={styles.textInput}
-                                    editable={false}> 
-                                </TextInput>
-                                <MaterialCommunityIcons 
-                                    name="slash-forward" 
-                                    style={styles.slashIcon}></MaterialCommunityIcons>
-                                <TextInput 
-                                    style={styles.textInput}
-                                    editable={false}> 
-                                </TextInput>
-                            </TouchableOpacity>
-                        </View>
-                    </View>
-                    <View>
-                        <Text>Estimated time of arrival</Text>
-                        <View style={styles.inputBlock}>
-                            <FontAwesome5 name="clock" style={styles.textInputIcons}>
-                            </FontAwesome5>
-                            <TextInput 
-                                placeholder="Estimated time of arrival" 
-                                style={styles.textInput}> 
-                            </TextInput>
-                        </View>
-                    </View>
-                </View>
+            <View style={styles.validateButtonAndFormBlock}>
+                <JourneyForm></JourneyForm>
                 <Button
-                    title="Validate"
+                    title="Find a journey"
                     color="#841584"
                     style={styles.validateButton}
                 >
-                    <FontAwesome5 
-                        name="user-circle" 
-                    >
-                    </FontAwesome5>
                 </Button>
                 {/* <FontAwesome5.Button name="search-location">Validate</FontAwesome5.Button> */}
-                <Button 
+            </View>
+            <Button 
                     title="Publish a journey"
                     onPress={() => navigation.navigate('PublishJourney')}
                 />
-                <DatePicker
-                    style={{
-                        borderWidth: 1,
-                    }}
-                    modal
-                    open={open}
-                    date={date}
-                    onConfirm={(date) => {
-                        setOpen(false)
-                        setDate(date)
-                    }}
-                    onCancel={() => {
-                        setOpen(false)
-                    }}
-                />
-            </View>
         </View>
     );
 };
