@@ -6,6 +6,7 @@ import type {Node} from 'react';
 import Home from './src/components/pages/Home';
 import Profile from './src/components/pages/Profile';
 import PublishJourney from './src/components/pages/PublishJourney';
+import FindJourney from './src/components/pages/FindJourney';
 
 // Utils 
 import {NavigationContainer} from '@react-navigation/native';
@@ -25,6 +26,7 @@ const App = () => {
           <Stack.Screen name="Home" component={Home} />
           <Stack.Screen name="Profile" component={Profile} />
           <Stack.Screen name="PublishJourney" component={PublishJourney} />
+          <Stack.Screen name="FindJourney" component={FindJourney} />
         </Stack.Navigator>
       </NavigationContainer>
   );

@@ -101,8 +101,8 @@ const Home = ({navigation}) => {
         <Button
           title="Find a journey"
           color="#841584"
+          onPress={() => navigation.navigate('FindJourney')}
           style={styles.validateButton}></Button>
-        {/* <FontAwesome5.Button name="search-location">Validate</FontAwesome5.Button> */}
       </View>
       <Button
         title="Publish a journey"

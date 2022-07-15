@@ -221,14 +221,13 @@ const JourneyForm = props => {
     );
   };
 
-  const renderTest = () => {
+  const renderIsDriver = () => {
     return (
       <View
         style={{
           flexDirection: 'row',
           alignItems: 'center',
           justifyContent: 'center',
-          //   flexWrap: 'wrap',
         }}>
         <TouchableOpacity
           onPress={() => setIsDriver(true)}
@@ -276,7 +275,7 @@ const JourneyForm = props => {
 
   return (
     <View>
-      {props.isPublishingJourney === true ? renderTest() : null}
+      {props.isPublishingJourney === true ? renderIsDriver() : null}
       {renderForm()}
       {renderDatePickers()}
     </View>
